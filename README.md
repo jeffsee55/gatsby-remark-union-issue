@@ -30,7 +30,7 @@ query MyQuery {
 You'll notice this query won't work since `heroField2` and 
 `columnField2` aren't explicitly defined in the 
 `createSchemaCustomization` function found in `gatsby-node.js`:
-```
+```gql
 query MyQuery {
   allMarkdownRemark {
     edges {
