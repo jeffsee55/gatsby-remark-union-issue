@@ -19,6 +19,7 @@ exports.createSchemaCustomization = ({ actions: { createTypes }, schema }) => {
         heroField1: 'String'
       },
       interfaces: ["Node"],
+      extensions: { infer: true }
     }),
     schema.buildObjectType({
       name: "BlockColumns",
@@ -27,6 +28,7 @@ exports.createSchemaCustomization = ({ actions: { createTypes }, schema }) => {
         columnField1: 'String!',
       },
       interfaces: ["Node"],
+      extensions: { infer: true }
     }),
     schema.buildUnionType({
       name: "HeroColumnUnion",
@@ -49,6 +51,7 @@ exports.createSchemaCustomization = ({ actions: { createTypes }, schema }) => {
           type: ['HeroColumnUnion'],
         }
       },
+      extensions: { infer: true }
     }),
   ]
   createTypes(typeDefs)
